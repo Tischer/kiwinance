@@ -1,0 +1,35 @@
+/* 
+    Summary
+
+    1. Imports
+    2. Header
+
+*/
+
+/*  ################ 
+
+1. Imports
+
+################ */
+
+@import "/src/styles/variables.scss";
+
+/*  ################ 
+
+1. Header
+
+################ */
+
+header {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $sections-spacing;
+    .colHeader {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+}
