@@ -3,6 +3,9 @@
 
     1. Imports
     2. Header
+        2.1 Global header
+        2.2 Logo header
+        2.3 Menu header
 
 */
 
@@ -26,10 +29,43 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: $sections-spacing;
-    .colHeader {
+    background-color: $font-color;
+
+    // 2.1 Global header
+    * {
+        color: $background-color;
+    }
+
+    // 2.2 Logo header
+    .logoHeader {
+        .brand {
+            font-size: $big-font;
+            font-weight: 600;
+        }
+    }
+
+    // 2.3 Menu header
+    .menuHeaderDesktop {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
+        li {
+            margin: 0 1rem;
+        }
+        li::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            height: 0.1rem;
+            width: 0%;
+            background-color: $background-color;
+            opacity: 0;
+            transition-duration: 0.5s;
+        }
+        li:hover::before {
+            width: 100%;
+            opacity: 1;
+        }
     }
 }
